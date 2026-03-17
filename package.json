@@ -1,0 +1,32 @@
+{
+  "name": "typebuster",
+  "version": "0.1.0",
+  "description": "Experimental type lab built with Next.js, opentype.js and SVG cubic outlines.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "typecheck": "tsc --noEmit",
+    "build": "next build",
+    "check": "npm run typecheck && npm run build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "next": "^15.0.0",
+    "opentype.js": "^1.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
