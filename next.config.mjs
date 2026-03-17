@@ -7,7 +7,10 @@ const nextConfig = {
   assetPrefix: isProd ? "/typebuster/" : "",
   distDir: isProd ? "out" : ".next-dev",
   devIndicators: false,
-  typedRoutes: true
+  typedRoutes: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? "/typebuster" : ""
+  }
 };
 
 export default nextConfig;

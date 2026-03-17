@@ -30,15 +30,17 @@ export type LoadedWorkbenchFontFamily = {
   black: Font | null;
 };
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const WORKBENCH_FONT_OPTIONS: WorkbenchFontOption[] = [
-  { key: "archivo", label: "Archivo", licensePath: "/licenses/Archivo-OFL.txt" },
-  { key: "dmSans", label: "DM Sans", licensePath: "/licenses/DMSans-OFL.txt" },
-  { key: "dmSerif", label: "DM Serif", licensePath: "/licenses/DMSerifDisplay-OFL.txt" },
-  { key: "playfair", label: "Playfair", licensePath: "/licenses/PlayfairDisplay-OFL.txt" },
+  { key: "archivo", label: "Archivo", licensePath: `${BASE}/licenses/Archivo-OFL.txt` },
+  { key: "dmSans", label: "DM Sans", licensePath: `${BASE}/licenses/DMSans-OFL.txt` },
+  { key: "dmSerif", label: "DM Serif", licensePath: `${BASE}/licenses/DMSerifDisplay-OFL.txt` },
+  { key: "playfair", label: "Playfair", licensePath: `${BASE}/licenses/PlayfairDisplay-OFL.txt` },
   {
     key: "bricolage",
     label: "Bricolage Grotesque",
-    licensePath: "/licenses/BricolageGrotesque-OFL.txt"
+    licensePath: `${BASE}/licenses/BricolageGrotesque-OFL.txt`
   }
 ];
 
@@ -46,49 +48,49 @@ const WORKBENCH_FONT_CONFIGS: Record<WorkbenchFontKey, WorkbenchFontConfig> = {
   archivo: {
     key: "archivo",
     label: "Archivo",
-    licensePath: "/licenses/Archivo-OFL.txt",
+    licensePath: `${BASE}/licenses/Archivo-OFL.txt`,
     masters: {
-      thin: "/fonts/Archivo-VarThin.ttf",
-      regular: "/fonts/Archivo-VarRegular.ttf",
-      black: "/fonts/Archivo-VarBlack.ttf"
+      thin: `${BASE}/fonts/Archivo-VarThin.ttf`,
+      regular: `${BASE}/fonts/Archivo-VarRegular.ttf`,
+      black: `${BASE}/fonts/Archivo-VarBlack.ttf`
     }
   },
   dmSans: {
     key: "dmSans",
     label: "DM Sans",
-    licensePath: "/licenses/DMSans-OFL.txt",
+    licensePath: `${BASE}/licenses/DMSans-OFL.txt`,
     masters: {
-      thin: "/fonts/DMSans-Thin.ttf",
-      regular: "/fonts/DMSans-Regular.ttf",
-      black: "/fonts/DMSans-Black.ttf"
+      thin: `${BASE}/fonts/DMSans-Thin.ttf`,
+      regular: `${BASE}/fonts/DMSans-Regular.ttf`,
+      black: `${BASE}/fonts/DMSans-Black.ttf`
     }
   },
   dmSerif: {
     key: "dmSerif",
     label: "DM Serif",
-    licensePath: "/licenses/DMSerifDisplay-OFL.txt",
+    licensePath: `${BASE}/licenses/DMSerifDisplay-OFL.txt`,
     masters: {
-      regular: "/fonts/DMSerifDisplay-Regular.ttf"
+      regular: `${BASE}/fonts/DMSerifDisplay-Regular.ttf`
     }
   },
   playfair: {
     key: "playfair",
     label: "Playfair",
-    licensePath: "/licenses/PlayfairDisplay-OFL.txt",
+    licensePath: `${BASE}/licenses/PlayfairDisplay-OFL.txt`,
     masters: {
-      thin: "/fonts/PlayfairDisplay-Thin.ttf",
-      regular: "/fonts/PlayfairDisplay-Regular.ttf",
-      black: "/fonts/PlayfairDisplay-Black.ttf"
+      thin: `${BASE}/fonts/PlayfairDisplay-Thin.ttf`,
+      regular: `${BASE}/fonts/PlayfairDisplay-Regular.ttf`,
+      black: `${BASE}/fonts/PlayfairDisplay-Black.ttf`
     }
   },
   bricolage: {
     key: "bricolage",
     label: "Bricolage Grotesque",
-    licensePath: "/licenses/BricolageGrotesque-OFL.txt",
+    licensePath: `${BASE}/licenses/BricolageGrotesque-OFL.txt`,
     masters: {
-      thin: "/fonts/BricolageGrotesque-Thin.ttf",
-      regular: "/fonts/BricolageGrotesque-Regular.ttf",
-      black: "/fonts/BricolageGrotesque-Black.ttf"
+      thin: `${BASE}/fonts/BricolageGrotesque-Thin.ttf`,
+      regular: `${BASE}/fonts/BricolageGrotesque-Regular.ttf`,
+      black: `${BASE}/fonts/BricolageGrotesque-Black.ttf`
     }
   }
 };
