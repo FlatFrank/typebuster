@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  distDir: process.env.NODE_ENV === "development" ? ".next-dev" : ".next",
+  output: "export",
+  basePath: isProd ? "/typebuster" : "",
+  assetPrefix: isProd ? "/typebuster/" : "",
+  distDir: isProd ? "out" : ".next-dev",
   devIndicators: false,
   typedRoutes: true
 };
